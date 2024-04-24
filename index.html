@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Конфігуратор Гамбургера</title>
+    <link
+      rel="stylesheet"
+      href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Створіть свій гамбургер</h1>
+
+      <form id="burgerForm">
+        <section class="burger-size">
+          <img
+            src="src/img/5e516f176c240d84beba54354fd93dcd.png"
+            alt="Burger Image"
+            class="burger-image" />
+          <label for="size">Оберіть розмір:</label>
+          <select
+            id="size"
+            class="burger-select">
+            <option value="small">Маленький</option>
+            <option value="large">Великий</option>
+          </select>
+        </section>
+
+        <section>
+          <label for="stuffing">Оберіть начинку:</label>
+          <select id="stuffing">
+            <option value="cheese">Сир</option>
+            <option value="salad">Салат</option>
+            <option value="potato">Картопля</option>
+          </select>
+        </section>
+        <section>
+          <label>Додайте топінги:</label>
+          <label
+            ><input
+              type="checkbox"
+              id="spice" />
+            Приправа</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              id="mayo" />
+            Майонез</label
+          >
+        </section>
+        <button
+          type="button"
+          onclick="calculateBurger()">
+          Розрахувати
+        </button>
+      </form>
+      <div id="results">
+        <p>Ціна: <span id="price">0</span> тугриків</p>
+        <p>Калорії: <span id="calories">0</span> ккал</p>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
